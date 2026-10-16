@@ -1,0 +1,250 @@
+/* CSS reset minimo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  /* background: #fff; */
+  background-color: beige;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h4{
+  text-align: left;
+}
+h3:not(.escluso){
+  text-align: left;
+  padding: 10px;
+  margin-left: 10px;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.headerAmazon {
+    background-color: #131921;
+    padding: 12px 20px;
+    font-size: 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 8%;
+    color: #ff9900;
+    font-size: 26px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.barraRicerca {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    font-size: 0%;
+}
+.barraRicerca input {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 11px;
+    border: none;
+    vertical-align: middle;
+}
+.barraRicerca button {
+    box-sizing: border-box;
+    width: 10%;
+    padding: 10px 0;
+    background-color: #febd69;
+    border: none;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* STILI MENU ACCOUNT HEADER */
+.menuHeader {
+    display: inline-block;
+    width: 20%;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.menuHeader a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.menuHeader a:last-child {
+    background-color: #293544;
+    padding: 10px;
+    border-radius: 4px;
+}
+.menuHeader a:hover {
+    text-decoration: underline;
+}
+
+/* Le offerte di oggi */
+.hero {
+  background-color: #303F51;
+  height: 200px;
+  color: white;
+  text-align: center;
+  padding:60px;
+}
+
+/* Categorie */
+.categorie{
+  text-align: center;
+  width: 100%;
+
+}
+.sezioniCategoria{
+  display: inline-block;
+  width: 23%;
+  background-color: white;  
+  border-radius: 10px;
+  overflow: hidden;
+  vertical-align: top;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.elettronica{
+  height: 200px;
+  background-color: #232F3E;
+  color: white;
+  text-align: center;
+ 
+  padding-top: 65px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.Libri{
+  height: 200px;
+  background-color: #C45500;
+  color: white;
+  text-align: center;
+  
+  padding-top: 65px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.Abbigliamento{
+  height: 200px;
+  background-color: #146EB4;
+  color: white;
+  text-align: center;
+  
+  padding-top: 65px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.Casa{
+  height: 200px;
+  background-color: #067D62;
+  color: white;
+  text-align: center;
+  
+  padding-top: 65px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.descrizioneCategoria{
+  text-align: left;
+  padding: 15px;
+}
+.descrizioneCategoria a{
+ color: #007185;
+ font-size: 13px;
+}
+
+.sezioniVenduti{
+  display: inline-block;
+  height: 500px;
+  width: 23%;
+  background-color: white;  
+  border-radius: 10px;
+  overflow: hidden;
+  vertical-align: top;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+.Sell{
+  height: 300px;
+  background-color: grey;
+  color: black;
+  text-align: center;
+  margin: 10px;
+  padding-top: 65px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.descrizioneProdotto {
+    height: 40px;
+    font-size: 16px;
+}
+.descrizioneSell{
+  text-align: left;
+  margin: 10px;
+  height: 40px;
+  
+  
+}
+.valutazioni{
+  display: inline-block;
+  color: #FF9900;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.prezzo{
+  color: rgba(255, 0, 0, 0.671);
+  font-weight: bold;
+  font-size: 20px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.buttonCarrello{
+  background-color: #FFD814;
+  border-radius: 20px;
+  width: calc(100% - 10px);
+  margin: 10px 5px;
+  padding: 10px;
+
+}
+
+
+.amazonfooter{
+  background-color: #232F3E;
+  color: white;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.elencofooter {
+  display: inline-block;
+  width: 33%;
+  
+}
+.elencofooter li{
+  list-style: none;
+}
