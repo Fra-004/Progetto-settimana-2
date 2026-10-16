@@ -124,7 +124,16 @@ console.log(prodotti);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function formattaPrezzo(prezzo){
+   for(i=0; i<prodotti.length; i++)
+   {
+      if(prezzo === prodotti[i].prezzo)
+      {
+          console.log(prodotti[i].nome + ': ' + prodotti[i].prezzo);
+      }
+   }
 }
+
+formattaPrezzo('750');
 
 
 /* VERSIONE INTERMEDIA — stelline(rating)
