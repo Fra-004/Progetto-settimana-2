@@ -53,7 +53,7 @@ const prodotti = [
       nome : 'pentola',
       categoria : 'casa',
       prezzo: '15',
-      rating: '4',
+      rating: '2.7',
       immagine: 'images.jpg',
       disponibile: true
    },
@@ -82,7 +82,7 @@ const prodotti = [
       disponibile: true
    },
    {
-      nome : 'letto matrimoniale',
+      nome : 'letto ',
       categoria : 'casa',
       prezzo: '800',
       rating: '3.5',
@@ -106,10 +106,10 @@ const prodotti = [
       disponibile: false
    },
    {
-      nome : 'giacca di pelle',
+      nome : 'giacca',
       categoria : 'abbigliamento',
       prezzo: '75',
-      rating: '3',
+      rating: '2.8',
       immagine: 'images.jpg',
       disponibile: true
    }
@@ -128,7 +128,7 @@ function formattaPrezzo(prezzo){
    {
       if(prezzo === prodotti[i].prezzo)
       {
-          console.log(prodotti[i].nome + ': ' + prodotti[i].prezzo);
+          console.log(prodotti[i].nome + ': €' + prodotti[i].prezzo);
       }
    }
 }
@@ -145,7 +145,6 @@ formattaPrezzo('750');
 /* SCRIVI QUI LA TUA RISPOSTA */
 function stelline(rating) {
     let risultato = "";
-
     for (let i = 0; i < 5; i++) {
         if (i < rating) {
             risultato += "★";
