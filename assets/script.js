@@ -15,101 +15,100 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/* Categorie: elettronica, casa, libri e abbigliamento */
 const prodotti = [
    {
-      nome : 'iphone',
-      categoria : 'elettronica',
+      nome: 'iphone',
+      categoria: 'elettronica',
       prezzo: '1000',
       rating: '5',
       immagine: 'images.jpg',
       disponibile: true
    },
    {
-      nome : 'tablet',
-      categoria : 'elettronica',
+      nome: 'tablet',
+      categoria: 'elettronica',
       prezzo: '300',
       rating: '4',
       immagine: 'images.jpg',
       disponibile: true
    },
    {
-      nome : 'penna',
-      categoria : 'libri',
+      nome: 'penna',
+      categoria: 'libri',
       prezzo: '1',
-      rating: '5',
+      rating: '3',
       immagine: 'images.jpg',
       disponibile: false
    },
    {
-      nome : 'zaino',
-      categoria : 'libri',
+      nome: 'zaino',
+      categoria: 'libri',
       prezzo: '20',
       rating: '4',
       immagine: 'images.jpg',
       disponibile: false
    },
    {
-      nome : 'pentola',
-      categoria : 'casa',
+      nome: 'pentola',
+      categoria: 'casa',
       prezzo: '15',
-      rating: '2.7',
+      rating: '2',
       immagine: 'images.jpg',
       disponibile: true
    },
    {
-      nome : 'tavolo',
-      categoria : 'casa',
+      nome: 'tavolo',
+      categoria: 'casa',
       prezzo: '200',
       rating: '5',
       immagine: 'images.jpg',
       disponibile: false
    },
    {
-      nome : 'astuccio',
-      categoria : 'libri',
+      nome: 'astuccio',
+      categoria: 'libri',
       prezzo: '4',
-      rating: '4',
+      rating: '3',
       immagine: 'images.jpg',
       disponibile: false
    },
    {
-      nome : 'cucina',
-      categoria : 'casa',
-      prezzo: '6000',
+      nome: 'sedia',
+      categoria: 'casa',
+      prezzo: '15',
       rating: '4',
       immagine: 'images.jpg',
       disponibile: true
    },
    {
-      nome : 'letto ',
-      categoria : 'casa',
+      nome: 'letto ',
+      categoria: 'casa',
       prezzo: '800',
-      rating: '3.5',
+      rating: '3',
       immagine: 'images.jpg',
       disponibile: true
    },
    {
-      nome : 'computer',
-      categoria : 'elettronica',
+      nome: 'computer',
+      categoria: 'elettronica',
       prezzo: '750',
       rating: '5',
       immagine: 'images.jpg',
       disponibile: true
    },
    {
-      nome : 'scarpe',
-      categoria : 'abbigliamento',
+      nome: 'scarpe',
+      categoria: 'abbigliamento',
       prezzo: '100',
-      rating: '4.9',
+      rating: '4',
       immagine: 'images.jpg',
       disponibile: false
    },
    {
-      nome : 'giacca',
-      categoria : 'abbigliamento',
+      nome: 'giacca',
+      categoria: 'abbigliamento',
       prezzo: '75',
-      rating: '2.8',
+      rating: '2',
       immagine: 'images.jpg',
       disponibile: true
    }
@@ -123,17 +122,18 @@ console.log(prodotti);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function formattaPrezzo(prezzo){
-   for(i=0; i<prodotti.length; i++)
-   {
-      if(prezzo === prodotti[i].prezzo)
-      {
-          console.log(prodotti[i].nome + ': €' + prodotti[i].prezzo);
+function formattaPrezzo(prezzo) {
+   for (i = 0; i < prodotti.length; i++) {
+      if (prezzo === prodotti[i].prezzo) {
+         console.log(prodotti[i].nome + ': €' + prodotti[i].prezzo);
       }
    }
 }
 
 formattaPrezzo('750');
+formattaPrezzo('1000');
+formattaPrezzo('15');
+formattaPrezzo('800');
 
 
 /* VERSIONE INTERMEDIA — stelline(rating)
@@ -144,30 +144,39 @@ formattaPrezzo('750');
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function stelline(rating) {
-    let risultato = "";
-    for (let i = 0; i < 5; i++) {
-        if (i < rating) {
-            risultato += "★";
-        } else {
-            risultato += "☆";
-        }
-    }
+   for (let i = 0; i < prodotti.length; i++) {
+      if (Number(prodotti[i].rating) === Number(rating)) {
 
-    return risultato;
+         let risultato = "";
+
+         for (let j = 0; j < 5; j++) {
+            if (j < rating) {
+               risultato += "★";
+            } else {
+               risultato += "☆";
+            }
+         }
+
+         console.log(prodotti[i].nome + ": rating " + prodotti[i].rating + " → " + risultato);
+      }
+   }
 }
-console.log('Monitor: rating 3 → ' + stelline(3));
+
+stelline(4);
+stelline(3);
+stelline(5);
+
+// console.log('Monitor: rating 3 → ' + stelline(3));
 
 /* VERSIONE INTERMEDIA — Filtro per categoria
    Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function Filtro(categoria){
-   for(i=0; i < prodotti.length; i++)
-   {
-      if(categoria === prodotti[i].categoria)
-      {
-       console.log(prodotti[i]);
+function Filtro(categoria) {
+   for (i = 0; i < prodotti.length; i++) {
+      if (categoria === prodotti[i].categoria) {
+         console.log(prodotti[i]);
       }
    }
 }
@@ -178,12 +187,10 @@ Filtro('elettronica');
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function FiltroDispRating(rating){
-   for(i=0; i < prodotti.length; i++)
-   {
-      if(prodotti[i].rating >= '3' && prodotti[i].disponibile === true)
-      {
-       console.log(prodotti[i]);
+function FiltroDispRating(rating) {
+   for (i = 0; i < prodotti.length; i++) {
+      if (prodotti[i].rating >= '3' && prodotti[i].disponibile === true) {
+         console.log(prodotti[i]);
       }
    }
 }
@@ -197,30 +204,46 @@ FiltroDispRating('3');
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function star(rating) {
+   let risultato = "";
+
+   for (let i = 0; i < 5; i++) {
+      if (i < rating) {
+         risultato += "★";
+      } else {
+         risultato += "☆";
+      }
+   }
+
+   return risultato;
+}
+
 function renderProdotti(lista) {
 
-    document.body.innerHTML = `
-        <table >
+   document.body.innerHTML = `
+        <table>
             <tr>
                 <th>Nome</th>
                 <th>Categoria</th>
                 <th>Prezzo</th>
+                <th>Rating</th>
             </tr>
         </table>
     `;
-    let table = document.querySelector('table');
-    table.style.border='1px solid black';
 
-    for (let i = 0; i < lista.length; i++) {
+   let table = document.querySelector('table');
+   table.style.border = '1px solid black';
 
-        document.querySelector('table').innerHTML += `
+   for (let i = 0; i < lista.length; i++) {
+
+      document.querySelector('table').innerHTML += `
             <tr>
                 <td>${lista[i].nome}</td>
                 <td>${lista[i].categoria}</td>
                 <td>${lista[i].prezzo} €</td>
-            </tr>
-        `;
-    }
+                <td>${star(Number(lista[i].rating))}</td>
+            </tr>`;
+   }
 }
 
 renderProdotti(prodotti);

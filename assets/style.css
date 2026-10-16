@@ -35,6 +35,11 @@ button {
   background: none;
 }
 
+.container{
+  width: 80%;
+  margin: auto;
+}
+
 .headerAmazon {
     background-color: #131921;
     padding: 12px 20px;
